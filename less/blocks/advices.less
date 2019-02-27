@@ -1,0 +1,119 @@
+.advices {
+  list-style: none;
+  padding-left: 21px;
+  padding-right: 3.25%;
+  padding-top: 26px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  p {
+    text-align: left;
+    margin-top: 14px;
+    margin-left: 49px;
+    margin-right: 20px;
+    //margin-bottom: -28px;
+    line-height: 20px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.advices__header {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  margin: 0;
+}
+
+.advices__header:before {
+  content: "";
+  display: inline-block;
+  background-size: cover;
+  vertical-align: -30%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.advices__item {
+  margin-bottom: 20px;
+}
+
+.advices__item:nth-child(1) .advices__header:before {
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-house.svg");
+}
+
+.advices__item:nth-child(2) .advices__header:before {
+  width: 32px;
+  height: 38px;
+  margin-right: 15px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.advices__item:nth-child(3) .advices__header:before {
+  width: 38px;
+  height: 34px;
+  vertical-align: -25%;
+  background-image: url("../img/icon-burger.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .advices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 38px #ffffff;
+    p {
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 45px;
+      line-height: 21px;
+    }
+  }
+
+  .advices__header {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .advices__item {
+    width: 33.33%;
+    padding-top: 62px;
+  }
+
+  .advices__item .advices__header:before {
+    display: block;
+    vertical-align: 0;
+    margin: 0 auto;
+    margin-bottom: 27px;
+  }
+
+  .advices__item:nth-child(1) .advices__header:before {
+    width: 75px;
+    height: 72px;
+
+  }
+
+  .advices__item:nth-child(2) .advices__header:before {
+    width: 64px;
+    height: 75px;
+    margin: 0 auto;
+    margin-bottom: 27px
+  }
+
+  .advices__item:nth-child(3) .advices__header:before {
+    width: 75px;
+    height: 68px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advices {
+    border-bottom-width: 58px;
+  }
+}

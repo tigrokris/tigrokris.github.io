@@ -1,0 +1,19 @@
+.text-strips{
+  &::before,
+  &::after {
+    content: "";
+    flex-grow: 1;
+    max-width: 125px;
+    height: 1px;
+    background: @border-color-feedback;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-strips {
+    &::before,
+    &::after {
+      max-width: 280px;
+    }
+  }
+}

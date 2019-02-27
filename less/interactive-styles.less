@@ -1,0 +1,90 @@
+.interactive {
+  &:hover {
+    background-color: @hover-color--blue;
+  }
+  &:active {
+    background-color: @active-color--blue;
+    color: @active-text-color--blue;
+    svg {
+      fill: @active-text-color--blue;
+    }
+    a {
+      color: @active-text-color--blue;
+    }
+  }
+  &:disabled {
+    background-color: @disabled-color--blue;
+  }
+}
+
+.interactive--video {
+  &:hover{
+    outline: none;
+    svg {
+      fill: @hover-color-video;
+    }
+  }
+  &:active {
+    svg {
+      fill: @active-video-color;
+    }
+  }
+
+}
+
+//Здесь идея БЭМ нарушена, надо переделать или разнести по блокам
+
+.interactive--feedback {
+  &:hover {
+    .feedback__check-text::before{
+      background-color: @hover-color-feedback;
+    }
+    .feedback__radio-text::before{
+      background-color: @hover-color-feedback;
+      border-color: @hover-color-feedback;
+    }
+  }
+  &:hover[type="text"],
+  &:hover[type="tel"],
+  &:hover[type="email"],
+  &.feedback__textarea:hover{
+    background-color: @hover-color-feedback;
+  }
+  &:focus[type="text"],
+  &:focus[type="tel"],
+  &:focus[type="email"],
+  &.feedback__textarea:focus{
+    background-color: #ffffff;
+    outline: solid @hover-color-feedback 4px;
+  }
+  &:active {
+    .feedback__check-text::before{
+      background-color: @active-color-feedback;
+    }
+    .feedback__radio-text::before{
+      background-color: #a4a4a4;
+      border-color: @active-color-feedback;
+    }
+  }
+}
+@media (min-width: @tablet-width) {
+  .interactive--video {
+    svg {
+      fill: #ffffff;
+    }
+    &:hover {
+      svg {
+        //fill: @hover-color-video;
+        fill: #ffffff;
+        opacity: 0.6;
+      }
+    }
+    &:active {
+      svg {
+        fill: #ffffff;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+

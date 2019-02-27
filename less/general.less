@@ -1,0 +1,65 @@
+@font-face {
+  font-weight: 400;
+  font-family: "PT Sans";
+  font-style: normal;
+
+  src: local("PT Sans"),url("../fonts/ptsans.woff2") format("woff2"),
+        url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans Bold";
+  font-style: normal;
+
+  src: local("PT Sans Bold"),url("../fonts/ptsansbold.woff2") format("woff2"),
+        url("../fonts/ptsansbold.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  //max-width: 1200px;
+  width: @genral-width;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: black;
+  font-style: normal;
+
+  background-color: white;
+  text-transform: uppercase;
+}
+picture{
+  font-size: 0px;
+  line-height: 0px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, label, div{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  &:active{
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+// Доступное скрытие элементов
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
+}

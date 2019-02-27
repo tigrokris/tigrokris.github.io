@@ -1,0 +1,150 @@
+.video {
+  padding-top: 35px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.video-box{
+  max-width: 800px;
+}
+.video__header {
+  margin: 0 30px;
+  margin-bottom: 35px;
+}
+
+.video__slider {
+  height: 45px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  &:active{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.video__background{
+  width: 100%;
+}
+.video__control-wraper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-item: center;
+  flex-wrap: wrap;
+  width: 87.5%;
+  margin: 0 6.25%;
+  position: absolute;
+  top: -53px;
+  background-image: linear-gradient(
+          to bottom,
+          transparent,
+          transparent 45px,
+          @light-gray-color 45px,
+          @light-gray-color 100%
+  );
+}
+.video__control {
+  width: 100%;
+  position: relative;
+}
+
+.range[type=range] {
+  width: 86%;
+  margin: 0 7%;
+  margin-top: 21px;
+  background-color: transparent;
+}
+
+.video__button {
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  margin-top: 3px;
+  background-color: transparent;
+  border: none;
+  &:nth-child(2) {
+    margin-right: auto;
+    margin-left: 3px;
+  }
+  &:last-child {
+    margin-right: 3px;
+  }
+}
+
+.video__icon {
+  fill: #5c6870;
+}
+@media (min-width: @mobile-L-width) {
+  .video__header {
+    margin: 0 auto;
+    max-width: 380px;
+  }
+}
+@media (min-width: @tablet-width) {
+  .video {
+    padding-top: 66px;
+  }
+
+  .video__icon {
+    fill: #ffffff;
+  }
+  .range[type=range]{
+    margin: 0;
+    width: 100%;
+  }
+  .video__header {
+    margin-bottom: 74px;
+    max-width: 430px;
+  }
+  .video__slider {
+    order: 2;
+    width: auto;
+    //height: auto;
+    padding-top: 15px;
+    flex-grow: 1;
+    background-color: transparent;
+    &:active{
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .video__button {
+    &:nth-child{
+      margin: 0;
+    }
+    &:nth-child(2) {
+      order: 1;
+      margin: 0 14px;
+    }
+    &:nth-last-child(2) {
+      order: 3;
+      margin-left: 14px;
+    }
+    &:last-child {
+      order: 4;
+      margin-right: 22px;
+    }
+  }
+
+  .video__control-wraper {
+    width: 100%;
+    height: 93px;
+    margin: 0;
+    top: -100px;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    &:active{
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .video {
+    padding-top: 71px
+  }
+  .video__header {
+    max-width: 440px;
+    margin-bottom: 72px;
+  }
+}
+
+

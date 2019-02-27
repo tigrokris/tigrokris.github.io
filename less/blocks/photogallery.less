@@ -1,0 +1,44 @@
+.photo-gallery{
+  width: auto;
+  padding-top: 13px;
+  border-bottom: solid 1px @border-color;
+  picture{
+    height: 0;
+  }
+}
+.photo-gallery__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @mobile-L-width) {
+  .photo-gallery__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photo-gallery__list li{
+    width: 50%;
+  }
+  .photo-gallery__list li:first-child {
+    width: 100%;
+  }
+  .photo-gallery{
+    border-bottom: none;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-gallery{
+    margin-top: 58px;
+  }
+  .photo-gallery__list li{
+    width: 33.33%;
+    padding: 0;//эти две строки удаляют непонятный баг: li больше содержимого
+    margin-bottom: -@to-fix-glitch;
+  }
+}

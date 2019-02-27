@@ -1,0 +1,27 @@
+.logo {
+  display: block;
+  width: 102px;
+  height: @logo-height;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: @mobile-L-width + 1px) {
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 -51px;
+  }
+}
+
+@media screen and (min-width: @desktop-width) {
+  .logo {
+    width: 187px;
+    margin: 0 -93.5px;
+    img{
+      width: 187px;
+    }
+  }
+}
