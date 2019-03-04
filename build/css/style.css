@@ -214,8 +214,9 @@ div:active {
   position: relative;
   background-color: #81b3d2;
   background-repeat: no-repeat;
-  background-size: auto auto;
+  background-size: cover;
   background-position: bottom center;
+  background-image: url("../img/back-mobile.jpg");
 }
 .intro::after {
   content: "";
@@ -233,19 +234,25 @@ div:active {
   height: 158px;
 }
 .intro--short .intro__billboard {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-image: url("../img/Sedona.svg");
-  background-position: bottom 67px right;
+  bottom: 67px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 229px;
+  height: 39px;
 }
 .intro--index {
   height: 388px;
 }
 .intro--index .intro__billboard {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-image: url("../img/welcome.svg");
-  background-position: top 78px right;
+  top: 78px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 280px;
+  height: 213px;
 }
 .advantages {
   padding-top: 28px;
@@ -932,17 +939,6 @@ input[type=range]:focus::-ms-fill-upper {
     height: 518px;
   }
 }
-@media (min-width: 321px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 321px) and (max-width: 768px) and (min-resolution: 144dpi), (min-width: 321px) and (max-width: 768px) and (min-resolution: 1.5dppx) {
-  .intro {
-    background-image: url("../img/back-tablet@2x.jpg");
-  }
-}
-@media (min-width: 321px) and (max-width: 768px) {
-  .intro {
-    background-image: url("../img/back-tablet.jpg");
-    margin-top: 0;
-  }
-}
 @media (min-width: 425px) {
   .page-main__h {
     margin: 0 auto;
@@ -961,6 +957,10 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .page-main--photo .page-main__header {
     margin: 0 auto;
+  }
+  .intro {
+    background-image: url("../img/back-tablet.jpg");
+    margin-top: 0;
   }
   .hotel-search__header {
     max-width: 400px;
@@ -1023,6 +1023,11 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .feedback__textarea {
     max-width: 768px;
+  }
+}
+@media (min-width: 425px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 425px) and (min-resolution: 144dpi), (min-width: 425px) and (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/back-tablet@2x.jpg");
   }
 }
 @media (min-width: 426px) {
@@ -1179,15 +1184,14 @@ input[type=range]:focus::-ms-fill-upper {
     height: 291px;
   }
   .intro--short .intro__billboard {
-    width: 460px;
-    height: inherit;
-    margin: 0 auto;
-    background-position: bottom 117px right;
+    bottom: 117px;
+    width: 458px;
+    height: 78px;
   }
   .intro--index .intro__billboard {
+    top: 72px;
     width: 460px;
-    height: 518px;
-    margin: 0 auto;
+    height: 360px;
   }
   .advantages__item-wrapper--triangle-top {
     padding-top: 0;
@@ -1564,6 +1568,15 @@ input[type=range]:focus::-ms-fill-upper {
     background-image: url("../img/back-desktop@2x.jpg");
   }
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: 187px;
+    margin: 0 -93.5px;
+  }
+  .logo img {
+    width: 187px;
+  }
+}
 @media (min-width: 1200px) {
   .page-main--photo {
     width: auto;
@@ -1583,9 +1596,6 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .intro--short {
     height: 301px;
-  }
-  .intro--short .intro__billboard {
-    background-position: bottom 120px right;
   }
   .advantages__flex-wraper {
     padding-top: 53px;
@@ -1745,20 +1755,6 @@ input[type=range]:focus::-ms-fill-upper {
             box-sizing: border-box;
   }
 }
-@media screen and (min-width: 1200px) {
-  .logo {
-    width: 187px;
-    margin: 0 -93.5px;
-  }
-  .logo img {
-    width: 187px;
-  }
-}
-@media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 320px) and (min-resolution: 144dpi), (max-width: 320px) and (min-resolution: 1.5dppx) {
-  .intro {
-    background-image: url("../img/back-mobile@2x.jpg");
-  }
-}
 @media (max-width: 425px) {
   .navig--closed .navig__item {
     display: none;
@@ -1812,20 +1808,8 @@ input[type=range]:focus::-ms-fill-upper {
             transform: rotate(-45deg);
   }
 }
-@media (max-width: 767px) {
-  .intro--short .intro__billboard {
-    width: 229px;
-    height: inherit;
-    margin: 0 auto;
-  }
-  .intro--index .intro__billboard {
-    width: 280px;
-    height: 388px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 320px) {
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../img/back-mobile.jpg");
+    background-image: url("../img/back-mobile@2x.jpg");
   }
 }

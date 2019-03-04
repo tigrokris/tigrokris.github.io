@@ -9,7 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();
-        document.createElement( "picture" );
+    document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
 </head>
@@ -29,12 +29,11 @@
         <source media="(min-width: 1200px)"
                 srcset="img/logo-desktop.svg" width="187" height="96">
         <source media="(min-width: 768px)"
-                srcset="img/logo-tablet.svg" width="135" height="111" >
+                srcset="img/logo-tablet.svg" width="135" height="111">
         <img src="img/logo-mobile.svg" alt="Логотип города Седона" width="135" height="111">
     </picture>
     <div class="intro intro--short">
-        <div class="intro__billboard"><p class="visually-hidden">Добро пожаловать в великолепную Седонну.Потому что
-            Гранд каньон - отстой.</p></div>
+        <img class="intro__billboard" src="img/Sedona.svg" alt="Город Седона" width="229" height="39">
     </div>
 </header>
 <main class="page-main page-main--feedback">
@@ -53,20 +52,23 @@
                         <ul class="feedback__inside-list">
                             <li class="feedback__inside-item">
                                 <label class="feedback__label--left" for="first-name">Имя*:</label>
-                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback" type="text"
+                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback"
+                                       type="text"
                                        id="first-name"
                                        name="first-name"
                                        placeholder="Петр">
                             </li>
                             <li class="feedback__inside-item">
                                 <label class="feedback__label--left" for="last-name">Фамилия*: </label>
-                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback" type="text"
+                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback"
+                                       type="text"
                                        id="last-name"
                                        name="last-name" placeholder="Иванов">
                             </li>
                             <li class="feedback__inside-item">
                                 <label class="feedback__label--left" for="second-name">Отчество:</label>
-                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback" type="text"
+                                <input class="feedback__input page-main__h feedback__placeholder interactive--feedback"
+                                       type="text"
                                        name="second-name"
                                        id="second-name"
                                        placeholder="Александрович">
@@ -81,7 +83,8 @@
 
                         <ul class="feedback__inside-list feedback__inside-list--contact">
                             <li class="feedback__inside-item feedback__inside-item--contact">
-                                <label class="feedback__label--contacts" for="phone"><span class="feedback-hide">Контактный</span> телефон*:</label>
+                                <label class="feedback__label--contacts" for="phone"><span class="feedback-hide">Контактный</span>
+                                    телефон*:</label>
                                 <span class="feedback__contact-icon">
                             <input class="feedback__input feedback__input--contact page-main__h feedback__placeholder interactive--feedback"
                                    type="tel" id="phone" name="phone"
