@@ -3,9 +3,11 @@
   max-width: 800px;
   margin: 0 auto;
 }
-.video-box{
+
+.video-box {
   max-width: 800px;
 }
+
 .video__header {
   margin: 0 30px;
   margin-bottom: 35px;
@@ -14,14 +16,17 @@
 .video__slider {
   height: 45px;
   width: 100%;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
-  &:active{
+  &:active {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-.video__background{
+
+.video__background {
   width: 100%;
 }
+
 .video__control-wraper {
   box-sizing: border-box;
   display: flex;
@@ -41,6 +46,7 @@
           @light-gray-color 100%
   );
 }
+
 .video__control {
   width: 100%;
   position: relative;
@@ -49,7 +55,11 @@
 .range[type=range] {
   width: 86%;
   margin: 0 7%;
-  margin-top: 21px;
+  padding: 0;
+  //margin-top: 21px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
   background-color: transparent;
 }
 
@@ -72,12 +82,14 @@
 .video__icon {
   fill: #5c6870;
 }
+
 @media (min-width: @mobile-L-width) {
   .video__header {
     margin: 0 auto;
     max-width: 380px;
   }
 }
+
 @media (min-width: @tablet-width) {
   .video {
     padding-top: 66px;
@@ -86,28 +98,31 @@
   .video__icon {
     fill: #ffffff;
   }
-  .range[type=range]{
+
+  .range[type=range] {
     margin: 0;
     width: 100%;
   }
+
   .video__header {
     margin-bottom: 74px;
     max-width: 430px;
   }
+
   .video__slider {
     order: 2;
-    width: auto;
+    width: 40%;
     //height: auto;
     padding-top: 15px;
     flex-grow: 1;
     background-color: transparent;
-    &:active{
+    &:active {
       background-color: rgba(0, 0, 0, 0);
     }
   }
 
   .video__button {
-    &:nth-child{
+    &:nth-child {
       margin: 0;
     }
     &:nth-child(2) {
@@ -132,15 +147,17 @@
     background-image: none;
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
-    &:active{
+    &:active {
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .video {
     padding-top: 71px
   }
+
   .video__header {
     max-width: 440px;
     margin-bottom: 72px;

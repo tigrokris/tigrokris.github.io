@@ -516,6 +516,7 @@ div:active {
 .video__slider {
   height: 45px;
   width: 100%;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .video__slider:active {
@@ -553,7 +554,11 @@ div:active {
 .range[type=range] {
   width: 86%;
   margin: 0 7%;
-  margin-top: 21px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
   background-color: transparent;
 }
 .video__button {
@@ -1351,7 +1356,7 @@ input[type=range]:focus::-ms-fill-upper {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    width: auto;
+    width: 40%;
     padding-top: 15px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
