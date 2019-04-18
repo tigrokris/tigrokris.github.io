@@ -16,4 +16,6 @@ toggle.addEventListener("click", function (evt) {
 map.addEventListener("click",function (evt) {
     evt.preventDefault();
     frame.classList.remove("visually-hidden");
+    document.querySelector(".hotel-search__map").classList.add("visually-hidden");
+    document.querySelector(".hotel-search__map-marker").classList.add("visually-hidden");
 });
