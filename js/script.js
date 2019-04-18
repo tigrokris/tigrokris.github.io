@@ -1,5 +1,7 @@
-var toggle = document.querySelector(".navig__toggle");
-var navig = document.querySelector(".navig");
+const toggle = document.querySelector(".navig__toggle");
+const navig = document.querySelector(".navig");
+const frame = document.querySelector(".hotel-search_frame");
+const map = document.querySelector(".hotel-search__map-wraper");
 
 toggle.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -10,4 +12,8 @@ toggle.addEventListener("click", function (evt) {
         navig.classList.remove("navig--opened");
         navig.classList.add("navig--closed");
     }
+});
+map.addEventListener("click",function (evt) {
+    evt.preventDefault();
+    frame.classList.remove("visually-hidden");
 });

@@ -437,6 +437,13 @@ div:active {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
+.hotel-search_frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 350px;
+}
 .button {
   display: block;
   background-color: #81b3d2;
