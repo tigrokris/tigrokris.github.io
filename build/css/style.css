@@ -473,6 +473,7 @@ div:active {
 }
 .photo__picture {
   width: 100%;
+  display: block;
 }
 .photo__title {
   font-family: "PT Sans Bold", Arial, sans-serif;
@@ -1639,8 +1640,6 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .photo-gallery__list li {
     width: 33.33%;
-    padding: 0;
-    margin-bottom: -8px;
   }
   .photo {
     width: auto;
@@ -1657,7 +1656,6 @@ input[type=range]:focus::-ms-fill-upper {
     left: 0;
     color: #ffffff;
     margin: 0;
-    margin-bottom: 8px;
     padding: 15px 21px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
